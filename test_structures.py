@@ -3,8 +3,6 @@ import json
 
 def main():
     print("СОЗДАНИЕ ОБЩЕГО ДЕРЕВА")
-
-    
     t = Tree()
     t.root = TreeNode("A")
     t.root.ch = [TreeNode("B"), TreeNode("C"), TreeNode("D")]
@@ -17,27 +15,21 @@ def main():
     
 
     print("КОНВЕРТАЦИЯ В БИНАРНОЕ ДЕРЕВО")
-
-    
     c = TreeConverter()
     bt = c.tree_to_binary_tree(t)
     
     print("\nБинарное дерево:")
     bt.print_tree()
     
-    print("\n" + "=" * 60)
+
     print("КОНВЕРТАЦИЯ ОБРАТНО")
-    print("=" * 60)
-    
     t2 = c.binary_tree_to_tree(bt)
     
     print("\nОбщее дерево:")
     t2.print_tree()
     
-    print("\n" + "=" * 60)
+
     print("СЛОВАРИ")
-    print("=" * 60)
-    
     print("\nОбщее дерево:")
     td = c.tree_to_dict(t)
     print(json.dumps(td, indent=2, ensure_ascii=False))
@@ -48,8 +40,6 @@ def main():
     
 
     print("ДОП ПРИМЕР")
-
-    
     bt2 = BinaryTree()
     bt2.root = BinaryTreeNode(1)
     bt2.root.l = BinaryTreeNode(2)
